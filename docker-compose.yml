@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres:16.2
+    container_name: rest_service_db
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_DB: REST-Service-DB
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+
