@@ -9,7 +9,6 @@ class UserMapperTest {
 
     @Test
     void userToUserDTOConversion() {
-        // Создаем экземпляр User
         User user = new User();
         user.setId(1);
         user.setUsername("userTest");

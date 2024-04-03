@@ -1,6 +1,7 @@
 package dao;
 import config.DatabaseConfig;
 import entity.Post;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -99,7 +100,7 @@ public class PostDAO {
 
     private Post mapToPost(ResultSet resultSet) throws SQLException {
         Post post = new Post();
-        post.setId(resultSet.getInt("post_id"));
+        post.setId(resultSet.getInt("id"));
         post.setUserId(resultSet.getInt("user_id"));
         post.setTitle(resultSet.getString("title"));
         post.setContent(resultSet.getString("content"));

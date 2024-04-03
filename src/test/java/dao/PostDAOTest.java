@@ -29,7 +29,6 @@ class PostDAOTest {
     @BeforeAll
     static void setUp() {
         DatabaseConfig databaseConfig = DatabaseConfig.getInstance();
-        // Переопределение параметров подключения к базе данных для использования контейнера
         databaseConfig.overrideConnectionUrl(postgresqlContainer.getJdbcUrl());
         databaseConfig.overrideUsername(postgresqlContainer.getUsername());
         databaseConfig.overridePassword(postgresqlContainer.getPassword());

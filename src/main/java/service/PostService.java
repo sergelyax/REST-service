@@ -40,7 +40,7 @@ public class PostService {
     public void createPost(PostDTO postDTO) {
         Post post = postMapper.postDTOToPost(postDTO);
         postDAO.createPost(post);
-        postDTO.setId(post.getId()); // Предполагая, что метод createPost обновляет объект post с новым ID
+        postDTO.setId(post.getId());
     }
 
     public void updatePost(PostDTO postDTO) {
